@@ -52,7 +52,6 @@ left join [Order] o on o.id = s.orderId
 where cast(dbo.tobdt(o.CreatedOnUtc)as date)>='2022-08-01'
 and cast(dbo.tobdt(o.CreatedOnUtc)as date)<'2022-09-01' 
 and o.Id in ()
-
 and Amount is not null
 and Status in  (1)
 
@@ -77,7 +76,6 @@ left join [Order] o on o.id = s.orderId
 where cast(dbo.tobdt(o.CreatedOnUtc)as date)>='2022-08-01'
 and cast(dbo.tobdt(o.CreatedOnUtc)as date)<'2022-09-01'
 and o.Id in ()
-
 and Amount is not null
 and Status in  (2)
 
@@ -100,7 +98,6 @@ join [Order] o on o.id = s.orderId
  
 where cast(dbo.tobdt(o.CreatedOnUtc)as date)>='2022-08-01'
 and cast(dbo.tobdt(o.CreatedOnUtc)as date)<'2022-09-01'
-
 and o.Id in ()
 and Amount is not null
 and SucceededOn is not null
